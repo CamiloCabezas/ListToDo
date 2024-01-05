@@ -1,0 +1,33 @@
+﻿
+.todo {
+    border: 1px solid black;
+    padding: 3px 5px 3px 5px;
+    border-radius: 10px;
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pen {
+    color: black;
+    font-size: 27px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.trash {
+    color: green;
+    font-size: 27px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cancel {
+    color: red;
+    font-size: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pen:active,
+.trash:active {
+    transform: scale(0.9);
+}
+

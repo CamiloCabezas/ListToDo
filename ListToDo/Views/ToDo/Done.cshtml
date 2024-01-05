@@ -1,0 +1,14 @@
+﻿@model ToDoModel 
+@{
+    ViewData["Title"] = "ToDo Done";
+}
+
+<h1>Are you sure about you finsh toDo  </h1>
+<form asp-action="DonePost">
+    <input type="hidden" asp-for="Id"/>
+    <p>@Model.Name</p>
+    <p>@Model.Description</p>
+
+    <button type="submit" class="btn btn-primary">Yes, I am sure</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-danger">Cancel</a>
+</form>

@@ -1,0 +1,23 @@
+﻿@model List<ToDoDone>
+@{
+    ViewData["Title"] = "Done";
+}
+
+
+<h1>Hola</h1>
+
+@foreach(var done in Model)
+{
+    <div class="container-done">
+        <div>
+            <h3>@done.Name</h3>
+            <div class="description">
+                <p>Description: </p>
+                <p>@done.Description</p>
+            </div>
+        </div>
+        <div class="create">
+            <p>completion date: @done.DateCreate</p>
+        </div>
+    </div>
+}

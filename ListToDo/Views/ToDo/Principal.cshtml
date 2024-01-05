@@ -1,0 +1,35 @@
+﻿@using ListToDo.Models
+@model List<ToDoModel>;
+@{
+    ViewData["Title"] = "List ToDo";
+}
+
+<div class="pagina">
+
+
+    <h1 class="mb-3">List</h1>
+    <h5>Here you can see all the things you have to do</h5>
+
+    <a class="btn btn-primary mb-3" asp-action="Crear">Creat</a>
+
+    <div>
+
+        @foreach (var todo in Model)
+        {
+            if(todo.Done == false)
+            {
+                <div class="mb-3 todo">
+                    <div>
+                        <h2>@todo.Name</h2>
+                        <p>@todo.Description</p>
+                    </div>
+                    <div>
+                        <a class="" asp-action="Editar" asp-route-id="@todo.Id"><i class="bi-pen-fill pen"></i></a>
+                        <a class="" asp-action="Done" asp-route-id="@todo.Id" ><i class="bi bi-bookmark-check trash"></i></a>
+                        <a><i class="bi bi-x cancel"></i></a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

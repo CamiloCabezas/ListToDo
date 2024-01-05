@@ -1,0 +1,63 @@
+﻿@model ToDViewModel
+
+@{
+    ViewData["Title"] = "ToDo";
+}
+
+<h1 class="mb-3">ToDo</h1>
+<h5 class="mb-5">- Here you will found all the things to do in your day after day</h5>
+
+
+    <div class="container">
+    @{
+        int conteo = 0;
+        int conteoDone = 0;
+    }
+
+    <div class="todo">
+
+        <h2>ToDo</h2>
+
+
+            @foreach (var todo in Model.ToDoList)
+            {
+                if (todo.Done == false)
+                {
+
+                    if (conteo < 5)
+                    {
+                        <div class="todoSub">
+                            <h5>@todo.Name</h5>
+                        </div>
+                        conteo += 1;
+                    }
+
+
+                }
+
+            }
+        
+
+
+        <a asp-controller="ToDo" asp-action="Principal" class="btn btn-primary">More</a>
+
+        </div>
+    
+
+        <div class="todoDone">
+            <h2>ToDo Done</h2>
+        @foreach(var todo in Model.toDoDones)
+        {
+            if(conteoDone < 5)
+            {
+                <div class="todoSubDone">
+                    <h5>@todo.Name</h5>
+                </div>
+                conteoDone += 1;
+            }
+        }
+        </div>
+    </div>
+
+
+

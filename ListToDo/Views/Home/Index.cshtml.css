@@ -1,0 +1,40 @@
+﻿.container{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 8px
+}
+
+.todo{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px
+
+}
+
+.todoDone {
+    padding: 10px   ;
+    border: 1px solid black;
+    border-radius: 10px
+}
+
+.todoSub {
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 3px 3px 3px 3px;
+    background-color: lightgrey
+}
+
+.todoSubDone {
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 3px 3px 3px 3px;
+    background-color: forestgreen;
+}
+
+.principalRedirect {
+    color: black;
+    text-decoration: none;
+    background-color: red;
+}
